@@ -3,6 +3,7 @@ import { useState } from 'react';
 import './style.css';
 import Input from './Input';
 import ResultBoard from './ResultBoard';
+import Button from './Button';
 
 export default function App() {
   const [searchValue, setSeatchValue] = useState('');
@@ -45,6 +46,12 @@ export default function App() {
     <div>
       <h1>Hello StackBlitz!</h1>
       <Input onInputChange={onInputChange} />
+      <Button
+        onClickFn={(e) => {
+          console.log('clicked in app');
+        }}
+        name={'Search'}
+      />
       <ResultBoard arrayOfResults={arrayOfResults} />
     </div>
   );
