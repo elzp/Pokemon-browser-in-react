@@ -25,7 +25,9 @@ export default function App() {
             .then((response) => {
               const pokemonData = {
                 name: response.name,
-                listOfAbilities: response.abilities.map((item) => item.ability),
+                listOfAbilities: response.abilities.map(
+                  (item) => item.ability.name
+                ),
                 img_url: response.sprites.front_default,
               };
               console.log(pokemonData, response);
