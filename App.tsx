@@ -6,7 +6,7 @@ import ResultBoard from './ResultBoard';
 import Button from './Button';
 
 export default function App() {
-  const [searchValue, setSeatchValue] = useState('');
+  const [searchValue, setSearchValue] = useState('');
   const [arrayOfResults, setArrayOfResults] = useState([]);
 
   function searchName(input) {
@@ -40,8 +40,9 @@ export default function App() {
 
   function onInputChange(e) {
     console.log(e.target.value);
-    searchName(e.target.value);
+    setSearchValue(e.target.value);
   }
+
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
