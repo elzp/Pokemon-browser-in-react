@@ -43,13 +43,17 @@ export default function App() {
     setSearchValue(e.target.value);
   }
 
+  function handleClickSearch(e) {
+    searchName(searchValue);
+  }
+
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
       <Input onInputChange={onInputChange} />
       <Button
         onClickFn={(e) => {
-          console.log('clicked in app');
+          handleClickSearch(e);
         }}
         name={'Search'}
       />
