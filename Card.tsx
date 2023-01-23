@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Button from './Button';
 
 export default function Card(props) {
   return (
@@ -8,7 +9,12 @@ export default function Card(props) {
       {props.listOfAbilities.map((ability) => {
         return <div>{ability}</div>;
       })}
-      Button
+      <Button
+        onClickFn={(e) => {
+          console.log('clicked');
+        }}
+        name={'Add to Pokedex'}
+      />
     </div>
   );
 }
