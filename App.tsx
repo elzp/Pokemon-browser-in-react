@@ -20,6 +20,7 @@ export default function App() {
         return resultOfSearch;
       })
       .then((response) => {
+        let arrayCointainer = [];
         response.forEach((item) => {
           fetch(item.url)
             .then((response) => response.json())
@@ -31,9 +32,11 @@ export default function App() {
                 ),
                 img_url: response.sprites.front_default,
               };
-              console.log(pokemonData, response);
+              arrayCointainer.push(pokemonData);
             });
         });
+        console.log('results after ferxching', arrayCointainer);
+        setArrayOfResults(arrayCointainer);
       })
       .catch((err) => console.error(err));
   }
