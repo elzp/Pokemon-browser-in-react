@@ -6,8 +6,8 @@ export default function Card(props) {
     <div>
       <img src={props.img_url} alt="" />
       <div>{props.name}</div>
-      {props.listOfAbilities.map((ability) => {
-        return <div>{ability}</div>;
+      {props.listOfAbilities.map((ability, index) => {
+        return <div key={ability + index}>{ability}</div>;
       })}
       <Button
         onClickFn={(e) => {
