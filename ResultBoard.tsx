@@ -14,7 +14,7 @@ export default function ResultBoard(props) {
     //     'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png',
     // },
   ]);
-  const [text, changeText] = React.useState('search some pokemons')
+  const [text, changeText] = React.useState('search some pokemons');
   const { search, searchedValue } = props;
   async function searchName(input) {
     await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=1279`)
@@ -48,12 +48,15 @@ export default function ResultBoard(props) {
   }
 
   React.useEffect(() => {
+    if (!search) {
+      setArrayOfResults([]);
+    }
     if (search && searchedValue !== '') {
       searchName(searchedValue);
     }
     if (search && searchedValue === '') {
       setArrayOfResults([]);
-      changeText('search some pokemons')
+      changeText('search some pokemons');
     }
     props.setSearch(false);
   }, [search]);
