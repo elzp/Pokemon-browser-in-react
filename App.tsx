@@ -10,6 +10,7 @@ export default function App() {
   const [searchValue, setSearchValue] = useState('');
   const [search, setSearch] = useState(false);
   const [ispokedexVisible, setVsibilityOfPokedex] = React.useState(false);
+  const [pokemontsInPokedex, setpokemontsInPokedex] = React.useState([]);
   function onInputChange(e) {
     console.log(e.target.value);
     setSearchValue(e.target.value);
@@ -19,12 +20,32 @@ export default function App() {
     setSearch(true);
   }
 
+  function updatePokedex(data) {
+    const { type, name, listOfAbilities, img_url } = data;
+    switch (type) {
+      case 'add':
+        console.log(type);
+        setpokemontsInPokedex((prev) => [
+          ...prev,
+          { name, listOfAbilities, img_url },
+        ]);
+        break;
+      case 'remove':
+        console.log(type);
+      default:
+        break;
+    }
+  }
   return (
     <div>
       <h1>Explore Pokemon World!</h1>
       <div onClick={() => setVsibilityOfPokedex(true)}>Open POKEDEX</div>
       {ispokedexVisible && (
-        <Pokedex setVsibilityOfPokedex={setVsibilityOfPokedex} />
+        <Pokedex
+          setVsibilityOfPokedex={setVsibilityOfPokedex}
+          pokemontsInPokedex={pokemontsInPokedex}
+          updatePokedex={updatePokedex}
+        />
       )}
       <Input onInputChange={onInputChange} />
       <Button
@@ -37,6 +58,7 @@ export default function App() {
         search={search}
         searchedValue={searchValue}
         setSearch={setSearch}
+        updatePokedex={updatePokedex}
       />
     </div>
   );

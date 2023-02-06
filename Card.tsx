@@ -11,7 +11,7 @@ export default function Card(props) {
       })}
       <Button
         onClickFn={(e) => {
-          console.log('clicked');
+          props.doWhenClicked()
         }}
         name={props.textOfButton}
       />
