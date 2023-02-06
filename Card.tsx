@@ -13,7 +13,7 @@ export default function Card(props) {
         onClickFn={(e) => {
           console.log('clicked');
         }}
-        name={'Add to Pokedex'}
+        name={props.textOfButton}
       />
     </div>
   );

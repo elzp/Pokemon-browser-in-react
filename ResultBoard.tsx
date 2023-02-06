@@ -73,6 +73,7 @@ export default function ResultBoard(props) {
               name={item.name}
               listOfAbilities={item.listOfAbilities}
               img_url={item.img_url}
+              textOfButton={'Add to Pokedex'}
             />
           );
         })
