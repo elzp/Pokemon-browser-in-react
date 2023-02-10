@@ -18,7 +18,7 @@ export default function Pokedex(props) {
             name={item.name}
             listOfAbilities={item.listOfAbilities}
             img_url={item.img_url}
-            textOfButton={'Add to Pokedex'}
+            textOfButton={'Remove'}
             doWhenClicked={() =>
               props.updatePokedex({
                 type: 'remove',
