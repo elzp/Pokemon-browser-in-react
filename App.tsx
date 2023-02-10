@@ -25,10 +25,12 @@ export default function App() {
     switch (type) {
       case 'add':
         console.log(type);
-        setpokemontsInPokedex((prev) => [
-          ...prev,
-          { name, listOfAbilities, img_url },
-        ]);
+        setpokemontsInPokedex((prev) => {
+          const next = prev.some((item) => item.name === name)
+            ? prev
+            : [...prev, { name, listOfAbilities, img_url }];
+          return next;
+        });
         break;
       case 'remove':
         console.log(type);
