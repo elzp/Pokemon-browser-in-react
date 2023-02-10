@@ -24,7 +24,6 @@ export default function App() {
     const { type, name, listOfAbilities, img_url } = data;
     switch (type) {
       case 'add':
-        console.log(type);
         setpokemontsInPokedex((prev) => {
           const next = prev.some((item) => item.name === name)
             ? prev
@@ -33,7 +32,11 @@ export default function App() {
         });
         break;
       case 'remove':
-        console.log(type);
+        setpokemontsInPokedex((prev) => {
+          const next = prev.filter((item) => item.name !== name);
+          console.log('next', next);
+          return next;
+        });
       default:
         break;
     }
