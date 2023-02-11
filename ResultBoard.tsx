@@ -62,7 +62,7 @@ export default function ResultBoard(props) {
   }, [search]);
 
   return (
-    <div>
+    <div className="resultBoard">
       {arrayOfResults.length === 0 ? (
         <div>{text}</div>
       ) : (

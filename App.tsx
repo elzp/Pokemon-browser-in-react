@@ -42,9 +42,8 @@ export default function App() {
     }
   }
   return (
-    <div>
+    <div className="app">
       <h1>Explore Pokemon World!</h1>
-      <div onClick={() => setVsibilityOfPokedex(true)}>Open POKEDEX</div>
       {ispokedexVisible && (
         <Pokedex
           setVsibilityOfPokedex={setVsibilityOfPokedex}
@@ -52,13 +51,16 @@ export default function App() {
           updatePokedex={updatePokedex}
         />
       )}
-      <Input onInputChange={onInputChange} />
-      <Button
-        onClickFn={(e) => {
-          handleClickSearch(e);
-        }}
-        name={'Search'}
-      />
+      <div className="search">
+        <Input onInputChange={onInputChange} />
+        <Button
+          onClickFn={(e) => {
+            handleClickSearch(e);
+          }}
+          name={'Search'}
+        />
+        <div onClick={() => setVsibilityOfPokedex(true)}>POKEDEX</div>
+      </div>
       <ResultBoard
         search={search}
         searchedValue={searchValue}

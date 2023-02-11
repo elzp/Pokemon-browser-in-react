@@ -3,7 +3,7 @@ import Button from './Button';
 
 export default function Card(props) {
   return (
-    <div>
+    <div className="card">
       <img src={props.img_url} alt="" />
       <div>{props.name}</div>
       {props.listOfAbilities.map((ability, index) => {
