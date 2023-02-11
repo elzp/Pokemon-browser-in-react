@@ -37,21 +37,29 @@ h1 {
   flex-wrap: wrap;
 }
 .card {
-  background: linear-gradient(
-    0deg,
-    #f78282,
-    #ebf8e1 75%,
-    #f78282
-  );
-  /* linear-gradient(
-    0.5turn,
-    rgb(245, 127, 127) 35%,
-    #ebf8e1 45%,
-    rgb(247, 177, 177)
-  ); */
+  background: linear-gradient(0deg, #f78282, #ebf8e1 75%, #f78282);
   border: 2px solid #f78282;
+  padding: 5px;
   margin: 10px 20px;
   width: min-content;
+}
+
+.card div {
+  font-size: 1.2em;
+  margin: 3px;
+  min-width: 130px;
+  position: relative;
+}
+.card div.img {
+  min-height: 100px;
+}
+.card button {
+  background-color: white;
+  border: none;
+}
+span {
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .pokedex {
   position: absolute;

@@ -4,17 +4,21 @@ import Button from './Button';
 export default function Card(props) {
   return (
     <div className="card">
-      <img src={props.img_url} alt="Image is not provided" />
-      <div>{props.name}</div>
-      {props.listOfAbilities.map((ability, index) => {
-        return <div key={ability + index}>{ability}</div>;
-      })}
       <Button
         onClickFn={(e) => {
           props.doWhenClicked();
         }}
         name={props.textOfButton}
       />
+      <div className="img">
+        <img src={props.img_url} alt="Image is not provided" />
+      </div>
+      <div>
+        <span>{props.name}</span>
+      </div>
+      {props.listOfAbilities.map((ability, index) => {
+        return <div key={ability + index}>{ability}</div>;
+      })}
     </div>
   );
 }
