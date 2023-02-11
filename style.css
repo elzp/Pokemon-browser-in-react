@@ -13,6 +13,7 @@ p {
 }
 div {
   text-align: center;
+  padding: 0.3em;
 }
 .app {
   background-color: rgb(217, 219, 219);
@@ -60,6 +61,30 @@ h1 {
 span {
   text-transform: uppercase;
   font-weight: bold;
+}
+.button-to-pokedex {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, red 45%, black 45% 50%, white 50%);
+}
+.circle-inside-pokedex {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
 }
 .pokedex {
   position: absolute;

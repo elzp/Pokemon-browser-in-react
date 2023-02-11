@@ -59,7 +59,13 @@ export default function App() {
           }}
           name={'Search'}
         />
-        <div onClick={() => setVsibilityOfPokedex(true)}>POKEDEX</div>
+        <div>Check your collection in Pokedex!</div>
+        <div
+          className="button-to-pokedex"
+          onClick={() => setVsibilityOfPokedex(true)}
+        >
+          <div className="circle-inside-pokedex"></div>
+        </div>
       </div>
       <ResultBoard
         search={search}
