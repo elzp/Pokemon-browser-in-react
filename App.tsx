@@ -43,7 +43,6 @@ export default function App() {
   }
   return (
     <div className="app">
-      <h1>Explore Pokemon World!</h1>
       {ispokedexVisible && (
         <Pokedex
           setVsibilityOfPokedex={setVsibilityOfPokedex}
@@ -51,6 +50,8 @@ export default function App() {
           updatePokedex={updatePokedex}
         />
       )}
+      <h1>Explore Pokemon World!</h1>
+
       <div className="search">
         <Input onInputChange={onInputChange} />
         <Button
