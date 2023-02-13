@@ -15,6 +15,7 @@ div {
   text-align: center;
   padding: 0.3em;
 }
+
 .app {
   background-color: rgb(217, 219, 219);
 }
@@ -95,6 +96,11 @@ span {
   height: 100vh;
   display: block;
   text-align: center;
+}
+
+.pokedex-welcome {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 .pokedex .card {
   margin: 10px auto;

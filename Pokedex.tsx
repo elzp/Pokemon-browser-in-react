@@ -13,7 +13,7 @@ export default function Pokedex(props) {
         className="pokedex_closebutton"
         onClick={() => props.setVsibilityOfPokedex(false)}
       ></div>
-      Pokedex
+      <div className='pokedex-welcome'>Pokedex</div>
       {props.pokemontsInPokedex.map((item: pokemonItem, index: number) => {
         return (
           <Card
