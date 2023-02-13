@@ -41,7 +41,7 @@ h1 {
   background: linear-gradient(0deg, #f78282, #ebf8e1 75%, #f78282);
   border: 2px solid #f78282;
   padding: 5px;
-  margin: 10px 20px;
+  margin: 10px auto;
   width: min-content;
 }
 
@@ -87,9 +87,22 @@ span {
   border: 2px solid black;
 }
 .pokedex {
-  position: absolute;
-  background-color: aqua;
-  left: 50%;
-  right: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: rgb(217, 219, 219);
+  left: 50vw;
+  width: 50vw;
   height: 100vh;
+  display: block;
+  text-align: center;
+}
+.pokedex .card {
+  margin: 10px auto;
+}
+@media (max-width: 560px) {
+  .pokedex {
+    left: 0;
+    width: 100vw;
+    display: block;
+  }
 }
