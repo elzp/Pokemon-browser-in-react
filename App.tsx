@@ -63,7 +63,10 @@ export default function App() {
         <div>Check your collection in Pokedex!</div>
         <div
           className="button-to-pokedex"
-          onClick={() => setVsibilityOfPokedex(true)}
+          onClick={() => {
+            setVsibilityOfPokedex(true);
+            setVsibilityOfPokedex(!ispokedexVisible);
+          }}
         >
           <div className="circle-inside-pokedex"></div>
         </div>
