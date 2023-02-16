@@ -96,6 +96,7 @@ span {
   height: 100vh;
   display: block;
   text-align: center;
+  overflow-y: scroll;
 }
 
 .pokedex-welcome {
