@@ -50,6 +50,10 @@ export default function ResultBoard(props) {
   React.useEffect(() => {
     if (!search) {
       setArrayOfResults([]);
+
+      if (arrayOfResults.length === 0 && searchedValue !== '') {
+        changeText('we not found pokemons with this phrase');
+      }
     }
     if (search && searchedValue !== '') {
       searchName(searchedValue);
