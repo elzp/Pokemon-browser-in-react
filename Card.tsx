@@ -1,23 +1,8 @@
 import * as React from 'react';
 import Button from './Button';
+import Abilities from './Abilities';
 
 export default function Card(props) {
-  // const [abilitiesDetails, setAbilitiesDetails] = React.useState(se);
-
-  // async function getAbilitiesDetails(url) {
-  //   let detail = '';
-  //   await fetch(url).then((response) => {
-  //     detail = response['effect_entries'].filter(
-  //       (item) => item.language.name === 'en'
-  //     )?.['short_effect'];
-  //   });
-  //   return detail;
-  // }
-  // React.useEffect(() => {
-  //   props.listOfAbilities.forEach((item) => {
-  //     setAbilitiesDetails((prev) => [...prev, getAbilitiesDetails(item[1])]);
-  //   });
-  // }, [props.listOfAbilities]);
   return (
     <div className="card">
       <Button
@@ -34,10 +19,7 @@ export default function Card(props) {
       </div>
       {props.listOfAbilities?.map((ability, index) => {
         return (
-          <div key={ability.name + index}>
-            {ability.name}
-            <div className="description">{ability.description}</div>
-          </div>
+          <Abilities ability={ability} index={index}/>
         );
       })}
     </div>
