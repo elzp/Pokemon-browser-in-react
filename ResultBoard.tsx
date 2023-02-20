@@ -40,25 +40,15 @@ export default function ResultBoard(props) {
             .then((response) => {
               let result = [];
               response.listOfAbilities.forEach(async (ability) => {
-                let newAbility = { ...ability };
-                console.log('newAbility', newAbility);
                 await fetch(ability.url)
                   .then((response21) => response21.json())
                   .then((response22) => {
-                    // console.log(
-                    //   response3.effect_entries.filter(
-                    //     (item) => item.language.name === 'en'
-                    //   )[0]?.short_effect
-                    // );
-                    newAbility['description'] =
-                      response22.effect_entries.filter(
-                        (item) => item.language.name === 'en'
-                      )[0]?.short_effect;
+                    ability['description'] = response22.effect_entries.filter(
+                      (item) => item.language.name === 'en'
+                    )[0]?.short_effect;
                   });
-                result.push(newAbility);
               });
               console.log('result', result, 'response', response);
-              response.listOfAbilities = result;
               setArrayOfResults((prev) => [...prev, response]);
             })
             .catch((err) => console.error(err));

@@ -35,10 +35,8 @@ export default function Card(props) {
       {props.listOfAbilities?.map((ability, index) => {
         return (
           <div key={ability.name + index}>
-            {/* {JSON.stringify(ability)} */}
-            cos
-            {JSON.stringify(ability.name)}
-            {JSON.stringify(ability.description)}
+            {ability.name}
+            <div className="description">{ability.description}</div>
           </div>
         );
       })}
