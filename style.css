@@ -61,10 +61,13 @@ h1 {
   border: none;
 }
 .ability {
-  height: 26px;
+  height: 15px;
+  padding: 0;
+  margin: 0;
 }
 .ability-name {
-  height: 26px;
+  padding: 0;
+  margin: 0;
 }
 .ability-description {
   z-index: 1;
