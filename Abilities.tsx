@@ -9,9 +9,13 @@ export default function Abilities(props) {
     value: isHovered,
   }: { ref: LegacyRef<HTMLDivElement>; value: boolean } = useHover();
   return (
-    <div key={ability.name + index}>
-      <div ref={hoverRef}>{ability.name}</div>
-      {isHovered && <div className="description">{ability.description}</div>}
+    <div key={ability.name + index} className="ability">
+      <div ref={hoverRef} className="ability-name">
+        {ability.name}
+      </div>
+      {isHovered && (
+        <div className="ability-description">{ability.description}</div>
+      )}
     </div>
   );
 }
