@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import './style.css';
+import './../style.css';
 import Input from './Input';
 import ResultBoard from './ResultBoard';
 import Button from './Button';
@@ -11,21 +11,26 @@ export default function App() {
   const [search, setSearch] = useState(false);
   const [ispokedexVisible, setVsibilityOfPokedex] = React.useState(false);
   const [pokemontsInPokedex, setpokemontsInPokedex] = React.useState([]);
-  function onInputChange(e) {
+  function onInputChange(e: any) {
     console.log(e.target.value);
     setSearchValue(e.target.value);
   }
 
-  function handleClickSearch(e) {
+  function handleClickSearch(e: Event) {
     setSearch(true);
   }
-
-  function updatePokedex(data) {
+interface pokemonData {
+  type: 'add'|'remove',
+  name: string,
+  listOfAbilities: Array<string>,
+  img_url: string
+}
+  function updatePokedex(data: pokemonData) {
     const { type, name, listOfAbilities, img_url } = data;
     switch (type) {
       case 'add':
-        setpokemontsInPokedex((prev) => {
-          const next = prev.some((item) => item.name === name)
+        setpokemontsInPokedex((prev: any) => {
+          const next = prev.some((item: pokemonData) => item.name === name)
             ? prev
             : [...prev, { name, listOfAbilities, img_url }];
           return next;
@@ -33,7 +38,7 @@ export default function App() {
         break;
       case 'remove':
         setpokemontsInPokedex((prev) => {
-          const next = prev.filter((item) => item.name !== name);
+          const next = prev.filter((item: pokemonData) => item.name !== name);
           console.log('next', next);
           return next;
         });
@@ -55,7 +60,7 @@ export default function App() {
       <div className="search">
         <Input onInputChange={onInputChange} />
         <Button
-          onClickFn={(e) => {
+          onClickFn={(e: Event) => {
             handleClickSearch(e);
           }}
           name={'Search'}
