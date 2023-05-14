@@ -44,12 +44,13 @@ h1 {
   margin: 10px auto;
   width: min-content;
   border-radius: 5px;
+  height: 220px;
 }
 
 .card div {
   font-size: 1.2em;
   margin: 3px;
-  min-width: 130px;
+  width: 130px;
   position: relative;
 }
 .card div.img {
@@ -58,6 +59,21 @@ h1 {
 .card button {
   background-color: white;
   border: none;
+}
+.ability {
+  height: 15px;
+  padding: 0;
+  margin: 0;
+}
+.ability-name {
+  padding: 0;
+  margin: 0;
+}
+.ability-description {
+  z-index: 1;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(156, 155, 155);
 }
 span {
   text-transform: uppercase;
