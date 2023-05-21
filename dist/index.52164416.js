@@ -26375,7 +26375,7 @@ function App() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "Explore Pokemon World!"
+                        children: "Explore Pokemons' World!"
                     }, void 0, false, {
                         fileName: "src/App.tsx",
                         lineNumber: 61,
@@ -26415,18 +26415,34 @@ function App() {
                         fileName: "src/App.tsx",
                         lineNumber: 74,
                         columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: "Check your collection in Pokedex!"
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 80,
-                        columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.tsx",
                 lineNumber: 72,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "app-description div-description",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "Check your collection in Pokedex!"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 82,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                        children: "Click on a pokeball above."
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 83,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/App.tsx",
+                lineNumber: 81,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultBoardDefault.default), {
@@ -26436,7 +26452,7 @@ function App() {
                 updatePokedex: updatePokedex
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 82,
+                lineNumber: 85,
                 columnNumber: 7
             }, this)
         ]
@@ -27548,7 +27564,7 @@ function ResultBoard(props) {
         if (search && searchedValue !== "") searchName(searchedValue);
         if (search && searchedValue === "") {
             setArrayOfResults([]);
-            changeText("search some pokemons");
+            changeText("search for some pokemons");
         }
         props.setSearch(false);
     }, [
@@ -27557,6 +27573,7 @@ function ResultBoard(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "resultBoard",
         children: arrayOfResults.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "div-description center",
             children: text
         }, void 0, false, {
             fileName: "src/ResultBoard.tsx",

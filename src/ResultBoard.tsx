@@ -69,7 +69,7 @@ export default function ResultBoard(props: any) {
     }
     if (search && searchedValue === '') {
       setArrayOfResults([]);
-      changeText('search some pokemons');
+      changeText('search for some pokemons');
     }
     props.setSearch(false);
   }, [search]);
@@ -77,7 +77,7 @@ export default function ResultBoard(props: any) {
   return (
     <div className="resultBoard">
       {arrayOfResults.length === 0 ? (
-        <div>{text}</div>
+        <div className='div-description center'>{text}</div>
       ) : (
         arrayOfResults.map((item: pokemonItem, index: number) => {
           return (

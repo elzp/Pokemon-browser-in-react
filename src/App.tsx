@@ -58,7 +58,7 @@ interface pokemonData {
         >
           <div className="circle-inside-pokedex"></div>
         </div>
-        <h1>Explore Pokemon World!</h1>
+        <h1>Explore Pokemons' World!</h1>
       </div>
       {ispokedexVisible && (
         <Pokedex
@@ -77,8 +77,11 @@ interface pokemonData {
           }}
           name={'Search'}
         />
-        <div>Check your collection in Pokedex!</div>
       </div>
+      <div className='app-description div-description'>
+          <p>Check your collection in Pokedex!</p> 
+          <p>Click on a pokeball above.</p>
+        </div>
       <ResultBoard
         search={search}
         searchedValue={searchValue}
