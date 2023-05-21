@@ -61,6 +61,7 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  row-gap: 10px;
   /* align-items: flex-start; */
 }
 .card {
@@ -69,7 +70,6 @@ h1 {
   margin: 10px auto;
   width: min-content;
   border-radius: 5px;
-  height: 220px;
 }
 
 .card div {
