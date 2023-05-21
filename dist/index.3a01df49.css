@@ -56,12 +56,11 @@ h1 {
   background-color: #fff;
   border: 2px solid red;
   border-radius: 30px;
-  flex-flow: wrap;
-  justify-content: flex-start;
-  row-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 270px);
+  justify-content: space-between;
   margin: 15px;
   padding: 20px;
-  display: flex;
+  display: grid;
   position: relative;
 }
 
@@ -71,7 +70,7 @@ h1 {
   border-radius: 5px;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 10px auto;
+  margin: 10px;
   padding: 5px;
   display: flex;
   position: relative;
