@@ -65,18 +65,22 @@ h1 {
   /* align-items: flex-start; */
 }
 .card {
+  position:relative;
   background: linear-gradient(0deg, #afb1b1, white 75%, #afb1b1);
   padding: 5px;
   margin: 10px auto;
-  width: min-content;
+  width: 250px;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .card div {
   font-size: 1.2em;
   margin: 3px;
-  width: 130px;
-  position: relative;
+  /* width: 130px; */
+  /* position: relative; */
 }
 .card div.img {
   min-height: 100px;
@@ -85,6 +89,14 @@ h1 {
   background-color: white;
   border: none;
 }
+
+.to-bottom {
+  position: absolute;
+  bottom: 2px;
+  left:50%;
+  transform: translateX(-50%);
+}
+
 .ability {
   height: 15px;
   padding: 0;

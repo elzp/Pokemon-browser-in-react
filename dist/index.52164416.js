@@ -27631,63 +27631,79 @@ function Card(props) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                onClickFn: (e)=>{
-                    props.doWhenClicked();
-                },
-                name: props.textOfButton
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                    children: props.name
+                }, void 0, false, {
+                    fileName: "src/Card.tsx",
+                    lineNumber: 14,
+                    columnNumber: 9
+                }, this)
             }, void 0, false, {
                 fileName: "src/Card.tsx",
                 lineNumber: 13,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "img",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: props.img_url,
-                    alt: "Image is not provided"
-                }, void 0, false, {
-                    fileName: "src/Card.tsx",
-                    lineNumber: 20,
-                    columnNumber: 9
-                }, this)
-            }, void 0, false, {
+                className: "flexed",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "img",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: props.img_url,
+                            alt: "Image is not provided"
+                        }, void 0, false, {
+                            fileName: "src/Card.tsx",
+                            lineNumber: 18,
+                            columnNumber: 9
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "src/Card.tsx",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, this),
+                    props.listOfAbilities?.map((ability, index)=>{
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            children: [
+                                ability.name,
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "description",
+                                    children: ability.description
+                                }, void 0, false, {
+                                    fileName: "src/Card.tsx",
+                                    lineNumber: 24,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, ability.name + index, true, {
+                            fileName: "src/Card.tsx",
+                            lineNumber: 22,
+                            columnNumber: 11
+                        }, this);
+                    })
+                ]
+            }, void 0, true, {
                 fileName: "src/Card.tsx",
-                lineNumber: 19,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-                    children: props.name
+                className: "to-bottom",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                    onClickFn: (e)=>{
+                        props.doWhenClicked();
+                    },
+                    name: props.textOfButton
                 }, void 0, false, {
                     fileName: "src/Card.tsx",
-                    lineNumber: 23,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Card.tsx",
-                lineNumber: 22,
+                lineNumber: 29,
                 columnNumber: 7
-            }, this),
-            props.listOfAbilities?.map((ability, index)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: [
-                        ability.name,
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "description",
-                            children: ability.description
-                        }, void 0, false, {
-                            fileName: "src/Card.tsx",
-                            lineNumber: 29,
-                            columnNumber: 13
-                        }, this)
-                    ]
-                }, ability.name + index, true, {
-                    fileName: "src/Card.tsx",
-                    lineNumber: 27,
-                    columnNumber: 11
-                }, this);
-            })
+            }, this)
         ]
     }, void 0, true, {
         fileName: "src/Card.tsx",

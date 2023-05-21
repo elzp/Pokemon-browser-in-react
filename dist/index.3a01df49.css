@@ -66,18 +66,20 @@ h1 {
 }
 
 .card {
-  width: min-content;
+  width: 250px;
   background: linear-gradient(0deg, #afb1b1, #fff 75%, #afb1b1);
   border-radius: 5px;
+  flex-direction: column;
+  justify-content: flex-start;
   margin: 10px auto;
   padding: 5px;
+  display: flex;
+  position: relative;
 }
 
 .card div {
-  width: 130px;
   margin: 3px;
   font-size: 1.2em;
-  position: relative;
 }
 
 .card div.img {
@@ -87,6 +89,13 @@ h1 {
 .card button {
   background-color: #fff;
   border: none;
+}
+
+.to-bottom {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .ability {
