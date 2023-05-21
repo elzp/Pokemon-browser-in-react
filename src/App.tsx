@@ -48,6 +48,18 @@ interface pokemonData {
   }
   return (
     <div className="app">
+      <div className="app-head">
+        <div
+            className="button-to-pokedex"
+            onClick={() => {
+              setVsibilityOfPokedex(true);
+              setVsibilityOfPokedex(!ispokedexVisible);
+            }}
+        >
+          <div className="circle-inside-pokedex"></div>
+        </div>
+        <h1>Explore Pokemon World!</h1>
+      </div>
       {ispokedexVisible && (
         <Pokedex
           setVsibilityOfPokedex={setVsibilityOfPokedex}
@@ -55,7 +67,7 @@ interface pokemonData {
           updatePokedex={updatePokedex}
         />
       )}
-      <h1>Explore Pokemon World!</h1>
+      
 
       <div className="search">
         <Input onInputChange={onInputChange} />
@@ -66,15 +78,6 @@ interface pokemonData {
           name={'Search'}
         />
         <div>Check your collection in Pokedex!</div>
-        <div
-          className="button-to-pokedex"
-          onClick={() => {
-            setVsibilityOfPokedex(true);
-            setVsibilityOfPokedex(!ispokedexVisible);
-          }}
-        >
-          <div className="circle-inside-pokedex"></div>
-        </div>
       </div>
       <ResultBoard
         search={search}

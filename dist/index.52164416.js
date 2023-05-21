@@ -26353,49 +26353,9 @@ function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
-            ispokedexVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokedexDefault.default), {
-                setVsibilityOfPokedex: setVsibilityOfPokedex,
-                pokemontsInPokedex: pokemontsInPokedex,
-                updatePokedex: updatePokedex
-            }, void 0, false, {
-                fileName: "src/App.tsx",
-                lineNumber: 52,
-                columnNumber: 9
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Explore Pokemon World!"
-            }, void 0, false, {
-                fileName: "src/App.tsx",
-                lineNumber: 58,
-                columnNumber: 7
-            }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search",
+                className: "app-head",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputDefault.default), {
-                        onInputChange: onInputChange
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 61,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                        onClickFn: (e)=>{
-                            handleClickSearch(e);
-                        },
-                        name: "Search"
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 62,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        children: "Check your collection in Pokedex!"
-                    }, void 0, false, {
-                        fileName: "src/App.tsx",
-                        lineNumber: 68,
-                        columnNumber: 9
-                    }, this),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "button-to-pokedex",
                         onClick: ()=>{
@@ -26406,18 +26366,67 @@ function App() {
                             className: "circle-inside-pokedex"
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 76,
+                            lineNumber: 59,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "src/App.tsx",
-                        lineNumber: 69,
+                        lineNumber: 52,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        children: "Explore Pokemon World!"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/App.tsx",
-                lineNumber: 60,
+                lineNumber: 51,
+                columnNumber: 7
+            }, this),
+            ispokedexVisible && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokedexDefault.default), {
+                setVsibilityOfPokedex: setVsibilityOfPokedex,
+                pokemontsInPokedex: pokemontsInPokedex,
+                updatePokedex: updatePokedex
+            }, void 0, false, {
+                fileName: "src/App.tsx",
+                lineNumber: 64,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _inputDefault.default), {
+                        onInputChange: onInputChange
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 73,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        onClickFn: (e)=>{
+                            handleClickSearch(e);
+                        },
+                        name: "Search"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 74,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: "Check your collection in Pokedex!"
+                    }, void 0, false, {
+                        fileName: "src/App.tsx",
+                        lineNumber: 80,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/App.tsx",
+                lineNumber: 72,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resultBoardDefault.default), {
@@ -26427,7 +26436,7 @@ function App() {
                 updatePokedex: updatePokedex
             }, void 0, false, {
                 fileName: "src/App.tsx",
-                lineNumber: 79,
+                lineNumber: 82,
                 columnNumber: 7
             }, this)
         ]
