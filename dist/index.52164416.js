@@ -27627,7 +27627,23 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _button = require("./Button");
 var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _s = $RefreshSig$();
 function Card(props) {
+    _s();
+    const countOfAbilities = props.listOfAbilities.length;
+    const defaultShowStatus = [
+        ...Array(countOfAbilities)
+    ].map((item)=>false);
+    const [show, setShow] = _react.useState(defaultShowStatus);
+    const closetooltip = (index)=>{
+        setShow((prev)=>{
+            const newValue = prev.map((item, index2)=>{
+                if (index === index2) return false;
+                else return item;
+            });
+            return newValue;
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
@@ -27636,12 +27652,12 @@ function Card(props) {
                     children: props.name
                 }, void 0, false, {
                     fileName: "src/Card.tsx",
-                    lineNumber: 14,
+                    lineNumber: 24,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Card.tsx",
-                lineNumber: 13,
+                lineNumber: 23,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27654,37 +27670,65 @@ function Card(props) {
                             alt: "Image is not provided"
                         }, void 0, false, {
                             fileName: "src/Card.tsx",
-                            lineNumber: 18,
+                            lineNumber: 28,
                             columnNumber: 9
                         }, this)
                     }, void 0, false, {
                         fileName: "src/Card.tsx",
-                        lineNumber: 17,
+                        lineNumber: 27,
                         columnNumber: 7
                     }, this),
                     props.listOfAbilities?.map((ability, index)=>{
                         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "ability",
                             children: [
-                                ability.name,
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                    className: "description",
-                                    children: ability.description
+                                    onMouseOver: ()=>{
+                                        console.log("onMouseOver");
+                                        setShow((prev)=>{
+                                            const newValue = prev.map((item, index2)=>{
+                                                if (index === index2) return true;
+                                                else return item;
+                                            });
+                                            return newValue;
+                                        });
+                                        console.log(show);
+                                    },
+                                    children: ability.name
                                 }, void 0, false, {
                                     fileName: "src/Card.tsx",
-                                    lineNumber: 24,
+                                    lineNumber: 33,
+                                    columnNumber: 13
+                                }, this),
+                                show[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "ability-description",
+                                    children: [
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            className: "pokedex_closebutton description_closebutton",
+                                            onClick: ()=>closetooltip(index)
+                                        }, void 0, false, {
+                                            fileName: "src/Card.tsx",
+                                            lineNumber: 43,
+                                            columnNumber: 50
+                                        }, this),
+                                        ability.description
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/Card.tsx",
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, ability.name + index, true, {
                             fileName: "src/Card.tsx",
-                            lineNumber: 22,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this);
                     })
                 ]
             }, void 0, true, {
                 fileName: "src/Card.tsx",
-                lineNumber: 16,
+                lineNumber: 26,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27696,22 +27740,23 @@ function Card(props) {
                     name: props.textOfButton
                 }, void 0, false, {
                     fileName: "src/Card.tsx",
-                    lineNumber: 30,
+                    lineNumber: 54,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Card.tsx",
-                lineNumber: 29,
+                lineNumber: 53,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/Card.tsx",
-        lineNumber: 12,
+        lineNumber: 22,
         columnNumber: 5
     }, this);
 }
 exports.default = Card;
+_s(Card, "wbW1VBkt/lGylSFV2+8g4w1vdrY=");
 _c = Card;
 var _c;
 $RefreshReg$(_c, "Card");

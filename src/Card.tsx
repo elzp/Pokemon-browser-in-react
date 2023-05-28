@@ -7,6 +7,16 @@ interface ability {
 }
 
 export default function Card(props: any) {
+  const countOfAbilities = props.listOfAbilities.length;
+  const defaultShowStatus = [...Array(countOfAbilities)].map(item=>false);
+  const [show, setShow]=React.useState(defaultShowStatus);
+
+  const closetooltip = (index: number) => {
+    setShow((prev)=>{
+    const newValue = prev.map((item,index2)=>{if(index===index2){return false}else{return item}});
+   
+    return newValue;
+  })}
 
   return (
     <div className="card">
@@ -19,9 +29,23 @@ export default function Card(props: any) {
       </div>
       {props.listOfAbilities?.map((ability: ability, index: number) => {
         return (
-          <div key={ability.name + index}>
-            {ability.name}
-            <div className="description">{ability.description}</div>
+          <div key={ability.name + index} className='ability'>
+            <div 
+             onMouseOver={()=>{console.log('onMouseOver');
+             setShow((prev)=>{
+              const newValue = prev.map((item,index2)=>{if(index===index2){return true}else{return item}});
+              
+              return newValue;
+             });
+             console.log(show)
+            }}>{ability.name}</div>
+            {show[index] &&(
+            <div className="ability-description"><div
+            className="pokedex_closebutton description_closebutton"
+            onClick={() => closetooltip(index)}
+          ></div>
+          {ability.description}</div>
+            )}
           </div>
         );
       })}

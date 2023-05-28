@@ -65,13 +65,13 @@ h1 {
 }
 
 .card {
-  width: 250px;
+  width: 210px;
   background: linear-gradient(0deg, #afb1b1, #fff 75%, #afb1b1);
   border-radius: 5px;
   flex-direction: column;
   justify-content: flex-start;
   margin: 10px;
-  padding: 5px;
+  padding: 5px 5px 47px;
   display: flex;
   position: relative;
 }
@@ -98,9 +98,8 @@ h1 {
 }
 
 .ability {
-  height: 15px;
-  margin: 0;
-  padding: 0;
+  height: 25px;
+  position: relative;
 }
 
 .ability-name {
@@ -110,9 +109,13 @@ h1 {
 
 .ability-description {
   z-index: 1;
+  width: 160px;
   background-color: #fff;
   border: 1px solid #9c9b9b;
   border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
 }
 
 span {
@@ -177,6 +180,13 @@ span {
   position: relative;
   left: calc(100% - 60px);
   right: 10px;
+}
+
+.description_closebutton {
+  position: relative;
+  top: -5px;
+  left: calc(100% - 40px);
+  transform: scale(.7);
 }
 
 .pokedex_closebutton:after, .pokedex_closebutton:before {
