@@ -118,15 +118,17 @@ span {
 }
 .button-to-pokedex {
   /* position: absolute; */
-  position: relative;
+  position: fixed;
   margin: 0;
   padding: 0;
   /* top: 15px; */
-  left: -15px; 
+  left: 5px;; 
   width: 50px;
   height: 50px;
   border-radius: 25px;
   background: linear-gradient(to bottom, red 45%, black 45% 50%, white 50%);
+  position: fixed;
+  z-index: 2;
 }
 .circle-inside-pokedex {
   margin: 0;
@@ -201,5 +203,8 @@ span {
     left: 0;
     width: 100vw;
     display: block;
+  }
+  .button-to-pokedex {
+    transform: scale(0.85);
   }
 }

@@ -126,12 +126,13 @@ span {
 .button-to-pokedex {
   width: 50px;
   height: 50px;
+  z-index: 2;
   background: linear-gradient(red 45%, #000 45% 50%, #fff 50%);
   border-radius: 25px;
   margin: 0;
   padding: 0;
-  position: relative;
-  left: -15px;
+  position: fixed;
+  left: 5px;
 }
 
 .circle-inside-pokedex {
@@ -211,6 +212,10 @@ span {
     width: 100vw;
     display: block;
     left: 0;
+  }
+
+  .button-to-pokedex {
+    transform: scale(.85);
   }
 }
 
