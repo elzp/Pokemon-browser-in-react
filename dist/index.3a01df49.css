@@ -163,12 +163,13 @@ span {
   width: 50vw;
   height: 100vh;
   text-align: center;
+  direction: rtl;
   background-color: #d9dbdb;
   display: block;
   position: fixed;
   top: 0;
   left: 50vw;
-  overflow-y: scroll;
+  overflow: scroll;
 }
 
 .pokedex-welcome {
@@ -183,6 +184,7 @@ span {
 .pokedex_closebutton {
   width: 40px;
   height: 40px;
+  direction: ltr;
   background-color: #fff;
   border-radius: 6px;
   margin: 0;
