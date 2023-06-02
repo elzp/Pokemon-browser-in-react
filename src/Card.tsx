@@ -31,6 +31,7 @@ export default function Card(props: any) {
         return (
           <div key={ability.name + index} className='ability'>
             <div 
+            className='ability-name'
              onMouseOver={()=>{console.log('onMouseOver');
              setShow((prev)=>{
               const newValue = prev.map((item,index2)=>{if(index===index2){return true}else{return item}});

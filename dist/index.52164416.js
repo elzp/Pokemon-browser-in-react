@@ -27683,6 +27683,7 @@ function Card(props) {
                             className: "ability",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                    className: "ability-name",
                                     onMouseOver: ()=>{
                                         console.log("onMouseOver");
                                         setShow((prev)=>{
@@ -27708,14 +27709,14 @@ function Card(props) {
                                             onClick: ()=>closetooltip(index)
                                         }, void 0, false, {
                                             fileName: "src/Card.tsx",
-                                            lineNumber: 43,
+                                            lineNumber: 44,
                                             columnNumber: 50
                                         }, this),
                                         ability.description
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/Card.tsx",
-                                    lineNumber: 43,
+                                    lineNumber: 44,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -27740,12 +27741,12 @@ function Card(props) {
                     name: props.textOfButton
                 }, void 0, false, {
                     fileName: "src/Card.tsx",
-                    lineNumber: 54,
+                    lineNumber: 55,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "src/Card.tsx",
-                lineNumber: 53,
+                lineNumber: 54,
                 columnNumber: 7
             }, this)
         ]

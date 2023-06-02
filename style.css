@@ -63,16 +63,22 @@ h1 {
 }
 .card {
   position:relative;
-  background: linear-gradient(0deg, #afb1b1, white 75%, #afb1b1);
+  background: repeating-conic-gradient(  from 3deg at 25% 25%,rgb(0, 89, 255) 0%,  rgb(96, 214, 235) 15%,  rgb(0, 89, 255) 33%);
   padding: 5px 5px 47px;
   margin: 10px 10px;
   width: 210px;
+  border: 10px solid rgb(251, 255, 0);
   border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+
+.card:nth-child(3n+1) {
+  background: repeating-conic-gradient(  from 3deg at 25% 25%,rgb(17, 124, 40) 0%, rgb(31, 250, 78)  20%,  rgb(17, 124, 40) 33%);
+
+}
 .card div {
   font-size: 1.2em;
   margin: 3px;
@@ -81,6 +87,7 @@ h1 {
 }
 .card div.img {
   min-height: 100px;
+  background: linear-gradient(0deg, #afb1b1, white 50%, #afb1b1);
 }
 .card button {
   background-color: white;
@@ -101,6 +108,8 @@ h1 {
 .ability-name {
   padding: 0;
   margin: 0;
+  display: inline-block;
+  width: fit-content;
 }
 .ability-description {
   position: absolute;
