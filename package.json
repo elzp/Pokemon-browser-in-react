@@ -21,6 +21,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
+  "alias": { "process": false },
   "devDependencies": {
     "parcel": "^2.8.3",
     "react-scripts": "^2.1.3"
